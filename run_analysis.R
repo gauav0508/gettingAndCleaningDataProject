@@ -26,7 +26,7 @@ names(sub_train) <- sub("V1","Subject_id",names(sub_train))
 test_ds <- c(x_test,y_test,sub_test)
 test_ds <- as.data.frame(test_ds)
 
-# Creating Dataset for Test 
+# Creating Dataset for Train
 train_ds <- c(x_train,y_train,sub_train)
 train_ds <- as.data.frame(train_ds)
 
@@ -41,7 +41,7 @@ meancol <- grep("mean()",features$V2)
 # Extract Standard Deviation columns
 stdcol <-  grep("std()",features$V2)
 
-# Merging mena and SD variables
+# Merging mean and SD variables
 meanstd <- c(meancol,stdcol)
 
 final_ds2 <- final_ds
